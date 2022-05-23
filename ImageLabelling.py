@@ -10,6 +10,9 @@ if not os.path.exists(LABELIMG_PATH):
     os.chdir(LABELIMG_PATH)
     cmd = "git clone https://github.com/tzutalin/labelImg "
     os.system(cmd)
+    # pojdi v labelimg in pogrbiši .git datoteko, ki je rezultat git clone
+    os.chdir('labelImg')
+    #os.system('rmdir /s /q .git')
 
 
 if os.name == 'posix':
