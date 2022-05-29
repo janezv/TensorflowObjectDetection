@@ -44,13 +44,3 @@ for path in paths.values():
             os.makedirs(path)
         if os.name == 'nt':
             os.makedirs(path)
-
-# ***********************************************************************************************************
-# 1. Download TF Models Pretrained Models from Tensorflow Model Zoo and Install TFOD
-# ********************************************************************************************************
-if not os.path.exists(os.path.join(paths['APIMODEL_PATH'], 'research', 'object_detection')):
-    # Iz dictionary sestavi string spremenljivko git command (natejena tmp2string, direkt vrednost iz dictionary vrže napako)
-    gitCommand = 'git clone https://github.com/tensorflow/models ' + \
-        paths['APIMODEL_PATH']
-    # izvedi git komando v CMD-ju
-    os.system(gitCommand)
